@@ -3,7 +3,7 @@ import { Card, CardImg, CardText, CardBody, Col } from "reactstrap";
 const CampsiteDetail = ({ campsite }) => {
   const { image, name, description } = campsite;
   return (
-    <Col>
+    <Col md='5' className="m-4">
       <Card>
         <CardImg top src={image} alt={name} />
         <CardBody>
