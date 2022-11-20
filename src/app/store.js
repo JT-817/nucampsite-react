@@ -12,7 +12,7 @@ export const store = configureStore({
     promotions: promotionsReducer,
     partners: partnersReducer,
     comments: commentsReducer,
-    user: userReducer
+    user: userReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([logger]),
 });
