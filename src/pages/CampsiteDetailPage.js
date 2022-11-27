@@ -12,12 +12,10 @@ import Loading from "../components/Loading";
 const CampsiteDetailPage = () => {
   const { campsiteId } = useParams();
   const campsite = useSelector(selectCampsiteById(campsiteId));
-  console.log('campsite:',campsite)
+  console.log("campsite", campsite);
 
   const isLoading = useSelector((state) => state.campsites.isLoading);
-  
-  const errMsg = useSelector((state) => state.campsites.errMsg)
-
+  const errMsg = useSelector((state) => state.campsites.errMsg);
   let content = null;
 
   if (isLoading) {
@@ -32,14 +30,13 @@ const CampsiteDetailPage = () => {
       </>
     );
   }
-  
 
   return (
     <Container>
       {campsite && <SubHeader current={campsite.name} detail={true} />}
-        <Row>{content}</Row>
+      <Row>{content}</Row>
     </Container>
-  )
-}
+  );
+};
 
 export default CampsiteDetailPage

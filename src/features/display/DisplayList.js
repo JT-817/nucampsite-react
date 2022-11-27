@@ -19,11 +19,11 @@ const DisplayList = () => {
     <Row>
       {items.map((item, idx) => {
         const { featuredItem, isLoading, errMsg } = item;
-        if (isLoading){
-          return <Loading key={idx}/>;
+        if (isLoading) {
+          return <Loading key={idx} />;
         }
         if (errMsg) {
-          return <Error key={idx} errMsg={errMsg}/>
+          return <Error errMsg={errMsg} key={idx} />;
         }
         return (
           featuredItem && (
